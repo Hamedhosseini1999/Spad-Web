@@ -1,11 +1,123 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@200&family=Nunito:wght@200;300;400;700&family=Open+Sans&display=swap");
 :root {
   --font: "Nunito", sans-serif;
+  --font2: "Montserrat", sans-serif;
+  --fon3: "Lato", sans-serif;
+  --fon4: "Open Sans", sans-serif;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  zoom: 97%;
+}
+
 body {
-  background: url(image/pexels-jaymantri-4827.jpg);
+  background: url(image/1.jpg);
   background-position: center;
-  background-size: 50%;
+  background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
   min-height: 100vh;
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 40px;
+}
+
+/* Header */
+.header {
+  height: 20vh;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header .logo-name > span {
+  font-size: 1.4rem;
+  font-family: var(--font);
+  font-weight: 600;
+  position: relative;
+  right: 60px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: transparent;
+  font-size: 1.1rem;
+  border: 1px solid #fff;
+  padding: 8px 30px;
+  font-family: var(--font2);
+}
+
+/* Navbar */
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  width: 300px;
+  height: 100vh;
+  text-align: center;
+  display: none;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 80%;
+}
+.list li {
+  list-style-type: none;
+  font-size: 1.5rem;
+  padding: 20px 0;
+}
+.list li a {
+  color: #fff;
+  text-decoration: none;
+}
+.logo {
+  width: 70px;
+  height: 70px;
+  margin: 70px auto 0;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Section : Welcome */
+.welcome {
+  padding: 40px 0;
+}
+
+.welcome .heading {
+  line-height: 1.1;
+  font-size: 5rem;
+  width: 459px;
+  letter-spacing: 8px;
+  margin-left: 10px;
+  font-family: var(--fon2);
+  margin-bottom: 60px;
+}
+
+.welcome .lead {
+  width: 400px;
+  color: #ffffffba;
+  margin-bottom: 60px;
+  line-height: 1.8;
 }
