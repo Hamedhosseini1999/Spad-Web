@@ -272,8 +272,18 @@ body.display {
   right: 0;
   height: 115%;
   background-color: #fff;
-  /* display: none; */
   color: #000;
+  clip-path: circle(5% at -10% -10%);
+  animation: clip 1s linear forwards;
+  transition: all 2s ease;
+  display: none;
+}
+.herbs.active {
+  /* clip-path: circle(50%); */
+  display: block;
+}
+.reactive {
+  animation: clip2 2s linear forwards;
 }
 
 .herbs .data {
@@ -306,4 +316,14 @@ body.display {
   font-size: 1.3rem;
   color: #2e2e2e;
   line-height: 1.7;
+}
+
+/* Animation */
+@keyframes clip {
+  form {
+    clip-path: circle(1% at -10% 0%);
+  }
+  to {
+    clip-path: circle(100%);
+  }
 }
