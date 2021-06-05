@@ -10,7 +10,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  zoom: 97%;
+  /* zoom: 97%; */
 }
 
 body {
@@ -18,10 +18,16 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /* overflow: hidden; */
+  overflow: hidden;
   min-height: 100vh;
   font-family: "Nunito", sans-serif;
   color: #fff;
+  transition: 0.5s;
+  zoom: 85%;
+}
+body.display {
+  transition: 0.5s;
+  transform: translateX(-200px);
 }
 
 .container {
@@ -55,7 +61,14 @@ body {
   font-size: 1.1rem;
   border: 1px solid #fff;
   padding: 8px 30px;
-  font-family: var(--font2);
+  font-family: var(--font);
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
 }
 
 /* Navbar */
@@ -63,12 +76,16 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #333;
+  background-color: #333333e0;
   color: #fff;
-  width: 300px;
-  height: 100vh;
+  width: 200px;
+  height: 115%;
+  transform: translateX(100%);
   text-align: center;
   display: none;
+}
+.display {
+  display: block;
 }
 .list {
   display: flex;
@@ -78,18 +95,25 @@ body {
 }
 .list li {
   list-style-type: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding: 20px 0;
+  transition: all 0.3s;
+}
+.list li:hover {
+  background-color: rgba(255, 255, 255, 0.425);
+  cursor: pointer;
 }
 .list li a {
   color: #fff;
+  cursor: pointer;
   text-decoration: none;
 }
 .logo {
   width: 70px;
   height: 70px;
   margin: 70px auto 0;
-  background-color: #fff;
+  /* background-color: #fff; */
+  border: 3px solid;
   border-radius: 50%;
 }
 
@@ -121,6 +145,18 @@ body {
 }
 
 /*Section : Data Herbs */
+/* When have active class */
+.data-herbs.active {
+  position: relative;
+  z-index: 1;
+}
+.data-herbs.active .item {
+  border-top: none;
+}
+.data-herbs.active .item:hover {
+  background-color: rgba(0, 0, 0, 0.397);
+}
+
 .herb-box {
   display: flex;
   justify-content: space-between;
@@ -147,7 +183,7 @@ body {
 .aside {
   width: 70px;
   background-color: rgba(51, 51, 51, 0.7);
-  height: 100%;
+  height: 115%;
   position: fixed;
   top: 0;
   right: 0;
@@ -182,7 +218,12 @@ body {
   border: 1px solid rgb(255, 255, 255, 0.4);
   border-radius: 50%;
   padding: 7px;
+  cursor: pointer;
 }
+.media:hover {
+  background-color: rgb(38, 129, 190);
+}
+
 .social .media a {
   color: #fff;
 }
@@ -220,4 +261,49 @@ body {
 }
 .social2 .media a {
   color: #fff;
+}
+
+/* Section: Herbs */
+.herbs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 115%;
+  background-color: #fff;
+  /* display: none; */
+  color: #000;
+}
+
+.herbs .data {
+  display: flex;
+}
+.herb-show {
+  padding: 100px 0 0 0;
+  box-shadow: 0 0 400px 0 rgb(0 0 0 / 51%);
+}
+.data .img-herb {
+  flex: 1;
+  display: grid;
+  place-content: center;
+  transform: scale(1.1);
+}
+.data .img-herb img {
+  box-shadow: 2px 12px 139px 0 rgb(0 0 0 / 51%);
+  width: 70%;
+  margin: auto;
+}
+.data .text-herb {
+  flex: 1;
+}
+.text-herb h4 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.text-herb p {
+  font-size: 1.3rem;
+  color: #2e2e2e;
+  line-height: 1.7;
 }
