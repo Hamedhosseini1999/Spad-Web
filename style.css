@@ -228,11 +228,12 @@ body.display {
 }
 .form-control {
   width: 100%;
-  border: 1px solid #a1a1a1;
+  /* border: 1px solid #a1a1a1; */
   border-radius: 4px;
   padding: 5px 0;
   margin-bottom: 40px;
   background-color: transparent;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
 }
 .form-control i {
   padding: 10px 0 10px 10px;
@@ -260,6 +261,7 @@ body.display {
   cursor: pointer;
   margin-bottom: 30px;
   transition: all 1s ease;
+  border-radius: 3px;
 }
 .btn-re:hover {
   animation: color 4s linear forwards infinite;
