@@ -207,7 +207,7 @@ body.display {
   margin: 300px auto;
   padding: 60px 30px 30px 30px;
   border-radius: 5px;
-  width: 450px;
+  width: 90%;
   color: #000;
   background-color: #fff;
   position: relative;
@@ -504,6 +504,25 @@ body.display {
     left: 17px;
     cursor: pointer;
   }
+  /* Sign up Modal */
+  .modal h3 {
+    font-size: 2.5rem;
+  }
+  .modal p {
+    font-size: 1.3rem;
+  }
+  .form-control {
+    padding: 3px 0;
+  }
+  .form-control input {
+    font-size: 1rem;
+  }
+  .btn-re {
+    padding: 9px 0;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    animation: color 1s linear forwards infinite;
+  }
 }
 /* Tablet  */
 @media screen and (max-width: 678px) {
@@ -592,6 +611,25 @@ body.display {
   .data-herbs.active .item:hover {
     transform: scale(1);
   }
+  /* Sign up Modal */
+  .modal h3 {
+    font-size: 2rem;
+  }
+  .modal p {
+    font-size: 1rem;
+  }
+  .form-control {
+    padding: 0px 0;
+  }
+  .form-control input {
+    font-size: 0.9rem;
+  }
+  .btn-re {
+    padding: 9px 0;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    animation: color 1s linear forwards infinite;
+  }
 }
 /* Smart Phone */
 @media screen and (max-width: 511px) {
@@ -659,5 +697,24 @@ body.display {
   }
   .data-herbs.active .item:hover {
     transform: scale(1);
+  }
+  /* Sign up Modal */
+  .modal h3 {
+    font-size: 2rem;
+  }
+  .modal p {
+    font-size: 1rem;
+  }
+  .form-control {
+    padding: 0px 0;
+  }
+  .form-control input {
+    font-size: 0.9rem;
+  }
+  .btn-re {
+    padding: 9px 0;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    animation: color 1s linear forwards infinite;
   }
 }
