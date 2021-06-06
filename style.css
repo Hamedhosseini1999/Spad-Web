@@ -71,6 +71,11 @@ body.display {
   cursor: pointer;
 }
 
+.header .bars {
+  margin: 0;
+  display: none;
+}
+
 /* Navbar */
 .nav {
   position: fixed;
@@ -79,7 +84,7 @@ body.display {
   background-color: #333333e0;
   color: #fff;
   width: 200px;
-  height: 115%;
+  height: 105%;
   transform: translateX(100%);
   text-align: center;
   display: none;
@@ -144,6 +149,9 @@ body.display {
   line-height: 1.8;
 }
 
+.buttons .sign {
+  display: none;
+}
 /*Section : Data Herbs */
 /* When have active class */
 .data-herbs.active {
@@ -183,7 +191,8 @@ body.display {
 .aside {
   width: 70px;
   background-color: rgba(51, 51, 51, 0.7);
-  height: 115%;
+  height: 105%;
+  /* display: none; */
   position: fixed;
   top: 0;
   right: 0;
@@ -323,10 +332,13 @@ body.display {
   top: 16px;
   left: 66px;
   cursor: pointer;
+  z-index: 999;
 }
 .back img {
   width: 100%;
 }
+
+/* Background Each herbs */
 
 /* Animation */
 @keyframes clip {
@@ -346,4 +358,213 @@ body.display {
   }
 }
 
-/*  */
+/* Add media Query Responsive*/
+@media screen and (max-width: 1207px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 80px;
+  }
+}
+/* Tablet */
+@media screen and (max-width: 854px) {
+  body {
+    zoom: 100%;
+    overflow: scroll;
+  }
+
+  .nav {
+    height: 100%;
+  }
+
+  .list {
+    height: 60%;
+  }
+  .list li {
+    font-size: 1rem;
+  }
+
+  /* Herb item box */
+  .item {
+    border-top: 1px solid rgba(255, 255, 255, 0.356);
+    width: 17%;
+    font-size: 1.3rem;
+    padding: 15px 0;
+  }
+  .herb-show {
+    padding: 60px 0px 0px;
+  }
+  .text-herb h4 {
+    font-size: 1.5rem;
+  }
+  .text-herb p {
+    font-size: 0.9rem;
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
+  .data .img-herb img {
+    width: 82%;
+  }
+  .back {
+    position: absolute;
+    width: 20px;
+    top: 12px;
+    left: 17px;
+    cursor: pointer;
+  }
+}
+/* Tablet  */
+@media screen and (max-width: 678px) {
+  .nav {
+    width: 280px;
+  }
+  body.display {
+    transform: translateX(-280px);
+    overflow: hidden;
+  }
+
+  /* Herb item box */
+  .herb-box {
+    flex-wrap: wrap;
+  }
+  .header .bars {
+    display: block;
+  }
+  .header .bars div {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px;
+  }
+  .sign-up {
+    display: none;
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  .buttons .sign {
+    display: inline;
+    /* margin-left: 100px; */
+  }
+  /* Aside */
+  .aside {
+    display: none;
+  }
+  /* Herb */
+  .herb-show {
+    padding: 10px 0px 0px;
+  }
+  .data {
+    flex-direction: column;
+  }
+  .data .img-herb {
+    transform: scale(1);
+  }
+  .data .img-herb img {
+    width: 50%;
+  }
+  .text-herb {
+    padding: 30px;
+  }
+  /* item */
+  .item {
+    border-top: 1px solid rgba(255, 255, 255, 0.356);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.356);
+    width: 50%;
+    font-size: 1.3rem;
+    padding: 15px 0;
+  }
+  /* herbs Box */
+  .data-herbs.active {
+    position: fixed;
+    right: -6px;
+    top: 0;
+    width: 140px;
+  }
+  .data-herbs.active .container {
+    padding: 0;
+  }
+  .data-herbs.active .herb-box {
+    background-color: rgba(0, 195, 255, 0.596);
+    flex-direction: column;
+  }
+  .data-herbs.active .item {
+    border-top: none;
+    width: 100%;
+    font-size: 0.7rem;
+  }
+  .data-herbs.active .item span {
+    padding: 10px;
+  }
+  .data-herbs.active .item:hover {
+    transform: scale(1);
+  }
+}
+/* Smart Phone */
+@media screen and (max-width: 511px) {
+  /* .nav {
+    width: 500px%;
+  } */
+  .container {
+    padding: 0 20px;
+    max-width: 90%;
+  }
+  /* Welcome */
+  .welcome > p {
+    font-size: 0.9rem;
+  }
+  .heading {
+    width: 231px !important;
+    font-size: 3rem !important;
+    margin-bottom: 30px;
+  }
+  .lead {
+    width: 250px !important;
+    font-size: 0.8rem !important;
+    margin-bottom: 30px;
+  }
+  .btn {
+    font-size: 0.8rem;
+  }
+  /* Herb */
+  .text-herb h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  .text-herb p {
+    font-size: 0.7rem;
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
+  /* Herb item box */
+  .herb-box {
+    flex-wrap: wrap;
+  }
+  .item {
+    border-top: 1px solid rgba(255, 255, 255, 0.356);
+    width: 50%;
+    font-size: 0.8rem;
+    padding: 15px 0;
+  }
+  .data-herbs.active {
+    position: fixed;
+    right: -6px;
+    top: 0;
+    width: 120px;
+  }
+  .data-herbs.active .herb-box {
+    background-color: rgba(0, 195, 255, 0.596);
+    flex-direction: column;
+  }
+  .data-herbs.active .item {
+    border-top: none;
+    width: 100%;
+    font-size: 0.7rem;
+  }
+  .data-herbs.active .item span {
+    padding: 10px;
+  }
+  .data-herbs.active .item:hover {
+    transform: scale(1);
+  }
+}

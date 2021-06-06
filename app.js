@@ -19,15 +19,22 @@ $(function () {
 
 // Varibles
 const nav = document.getElementById("nav");
-const openBars = document.getElementById("open");
+const openBars = document.querySelectorAll(".bars");
 const body = document.querySelector("body");
 const herbsBox = document.querySelector("#data-herbs .container .item");
 
 // Event Listeners
-openBars.addEventListener("click", () => {
-  nav.classList.toggle("display");
-  body.classList.toggle("display");
+// openBars.addEventListener("click", () => {
+//   nav.classList.toggle("display");
+//   body.classList.toggle("display");
+// });
+openBars.forEach((item) => {
+  item.addEventListener("click", () => {
+    nav.classList.toggle("display");
+    body.classList.toggle("display");
+  });
 });
+// console.log(openBars);
 
 // show herbs
 // herbsBox.addEventListener("click", function (e) {
