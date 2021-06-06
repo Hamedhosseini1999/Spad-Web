@@ -22,20 +22,33 @@ const nav = document.getElementById("nav");
 const openBars = document.querySelectorAll(".bars");
 const body = document.querySelector("body");
 const herbsBox = document.querySelector("#data-herbs .container .item");
+const modal = document.querySelector(".modal-container");
+const signBtn = document.querySelectorAll(".sign");
+const closeBtn = document.querySelector(".close");
 
 // Event Listeners
 // openBars.addEventListener("click", () => {
 //   nav.classList.toggle("display");
 //   body.classList.toggle("display");
 // });
+// Toggle Navbar
 openBars.forEach((item) => {
   item.addEventListener("click", () => {
     nav.classList.toggle("display");
     body.classList.toggle("display");
   });
 });
-// console.log(openBars);
 
+// Show Sign Up Modal
+signBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    modal.classList.add("show");
+  });
+});
+// Close sign box
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("show");
+});
 // show herbs
 // herbsBox.addEventListener("click", function (e) {
 //   const itemId = herbsBox.dataset.itemid;

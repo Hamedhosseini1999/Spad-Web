@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@200&family=Nunito:wght@200;300;400;700&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@200;600&family=Nunito:wght@200;300;400;700&family=Open+Sans&display=swap");
 :root {
   --font: "Nunito", sans-serif;
   --font2: "Montserrat", sans-serif;
@@ -186,7 +186,84 @@ body.display {
   background-color: rgba(255, 255, 255, 0.397);
   transform: scale(1.1);
 }
-
+/* Modal Sign Up */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  place-content: center;
+  background-color: rgba(58, 88, 87, 0.527);
+  display: none;
+  opacity: 0;
+  animation: opacity 0.9s ease forwards;
+}
+.modal-container.show {
+  display: grid;
+}
+.modal {
+  margin: 300px auto;
+  padding: 60px 30px 30px 30px;
+  border-radius: 5px;
+  width: 450px;
+  color: #000;
+  background-color: #fff;
+  position: relative;
+}
+.close {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  cursor: pointer;
+}
+.modal h3 {
+  font-size: 3rem;
+}
+.modal p {
+  font-size: 1.4rem;
+  padding: 20px 0;
+  color: #a1a1a1;
+}
+.form-control {
+  width: 100%;
+  border: 1px solid #a1a1a1;
+  border-radius: 4px;
+  padding: 5px 0;
+  margin-bottom: 40px;
+  background-color: transparent;
+}
+.form-control i {
+  padding: 10px 0 10px 10px;
+  font-size: 1.3rem;
+  color: #a1a1a1;
+}
+.form-control input {
+  width: 80%;
+  padding: 5px 5px 5px 20px;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+}
+.btn-re {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.3rem;
+  font-family: var(--font2);
+  font-weight: 600;
+  background: linear-gradient(to right, #33bff7, #1c83c9, #33bff7);
+  background-size: 200%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: all 1s ease;
+}
+.btn-re:hover {
+  animation: color 4s linear forwards infinite;
+}
 /* SideBar  */
 .aside {
   width: 70px;
@@ -340,7 +417,7 @@ body.display {
 
 /* Background Each herbs */
 
-/* Animation */
+/* Animation collection */
 @keyframes clip {
   form {
     clip-path: circle(1% at -10% 0%);
@@ -355,6 +432,22 @@ body.display {
   }
   to {
     clip-path: circle(1% at -10% 0%);
+  }
+}
+@keyframes color {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 200%;
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
