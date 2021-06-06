@@ -282,9 +282,6 @@ body.display {
   /* clip-path: circle(50%); */
   display: block;
 }
-.reactive {
-  animation: clip2 2s linear forwards;
-}
 
 .herbs .data {
   display: flex;
@@ -292,6 +289,7 @@ body.display {
 .herb-show {
   padding: 100px 0 0 0;
   box-shadow: 0 0 400px 0 rgb(0 0 0 / 51%);
+  position: relative;
 }
 .data .img-herb {
   flex: 1;
@@ -317,6 +315,18 @@ body.display {
   color: #2e2e2e;
   line-height: 1.7;
 }
+/* Arrow Back */
+
+.back {
+  position: absolute;
+  width: 38px;
+  top: 16px;
+  left: 66px;
+  cursor: pointer;
+}
+.back img {
+  width: 100%;
+}
 
 /* Animation */
 @keyframes clip {
@@ -327,3 +337,13 @@ body.display {
     clip-path: circle(100%);
   }
 }
+@keyframes close {
+  form {
+    clip-path: circle(100%);
+  }
+  to {
+    clip-path: circle(1% at -10% 0%);
+  }
+}
+
+/*  */

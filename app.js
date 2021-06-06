@@ -1,13 +1,19 @@
 // Jquery Part for show herbs Box
 $(function () {
-  // Click on herb box
+  // Show Herb box
   $(".herb-box div").on("click", function () {
     // get attr
     let ItemId = $(this).attr("data-itemId");
-
+    //  remove active class
     $(".herbs ").removeClass("active");
+    //  Add active class
     $("#" + ItemId).addClass("active");
     $("#data-herbs").addClass("active");
+  });
+  // Hide herb Box
+  $(".back").on("click", function () {
+    $(".herbs").removeClass("active");
+    $("#data-herbs").removeClass("active");
   });
 });
 
